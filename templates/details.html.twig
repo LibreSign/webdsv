@@ -1,0 +1,34 @@
+<div class="accordion mt-3" id="signatureDetails">
+    {% set i = 0 %}
+    {% for key, signature in data.signatures %}
+    {% set i = i + 1 %}
+    <div class="card">
+        <div class="card-header" id="signature{{i}}">
+            <h2 class="mb-0">
+                <button 
+                    class="btn btn-link btn-block text-left" 
+                    type="button" data-toggle="collapse" 
+                    data-target="#collapse{{i}}" 
+                    aria-expanded="true" 
+                    aria-controls="collapse{{i}}">
+                {{ key }}
+                </button>
+            </h2>
+        </div>
+        <div 
+            id="collapse{{i}}" 
+            class="collapse show" 
+            aria-labelledby="heading{{i}}" 
+            data-parent="#signature{{i}}">
+            <div class="card-body">
+                {% for prop in signature  %}
+                <details open>
+                    <summary>{{prop.label}}</summary>
+                    <p class="ml-3">{{prop.value }}</p>
+                </details>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

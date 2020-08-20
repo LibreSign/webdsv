@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+    php:
+        build: ./devops
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - 8080:80
+        environment:
+            - XDEBUG_CONFIG="profiler_enable=1"
+        extra_hosts:
+            - network_database:${HOST_IP:-192.168.0.7}

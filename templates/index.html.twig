@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+{% block head %}
+<style>
+#signatureDetails summary {
+    color: #8A8A8A;
+}
+</style>
+{% endblock head %}
+
+{% block content %}
+<h1 class="text-center m-5">Validador de Documentos</h1>
+
+<form action="" method="POST" enctype="multipart/form-data" >
+    
+    <div class="form-group">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="customFileLangHTML" name="pdf">
+            <label class="custom-file-label" for="customFileLangHTML" data-browse="Buscar Arquivo">Enviar arquivo PDF assinado</label>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <button type="submit" class="btn btn-primary mx-auto" name="submit"/>Validar Documento</button>
+    </div>
+</form>
+
+{% if data.error is defined %}
+    <div class="alert alert-danger my-3" role="alert">
+    {{ data.error.message}}
+    </div>
+{% endif %}
+
+{% if data.signatures is defined %}
+    {% include "details.html.twig" %}
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function () {
+    bsCustomFileInput.init();
+})
+</script>
+{% endblock scripts %}
