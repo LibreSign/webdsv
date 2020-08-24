@@ -1,26 +1,14 @@
 {
-    "name": "slim/slim-skeleton",
-    "description": "A Slim Framework skeleton application for rapid development",
+    "name": "lyseontech/webdsv",
+    "description": "Digital Signature Validation - Web version",
     "keywords": [
         "microframework",
         "rest",
         "router",
         "psr7"
     ],
-    "homepage": "http://github.com/slimphp/Slim-Skeleton",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
-        },
-        {
-            "name": "Pierre Berube",
-            "email": "pierre@lgse.com",
-            "homepage": "http://www.lgse.com/"
-        }
-    ],
+    "homepage": "https://validador.lt.coop.br/",
+    "license": "AGPL",
     "require": {
         "php": "^7.2",
         "ext-json": "*",
@@ -53,7 +41,6 @@
         }
     },
     "scripts": {
-        "start": "php -S localhost:8080 -t public",
         "test": "phpunit"
     }
 }

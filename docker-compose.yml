@@ -1,11 +1,11 @@
 version: "3.7"
 
 services:
-    php:
+    web:
         build:
             context: ./devops
             target: prod
         volumes:
-            - ./:/var/www/html
+            - ./web:/var/www/html
         ports:
             - 8080:80
