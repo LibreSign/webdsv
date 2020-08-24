@@ -10,16 +10,16 @@ return function (ContainerBuilder $containerBuilder) {
     // Global Settings Object
     $containerBuilder->addDefinitions([
         'settings' => [
-            'displayErrorDetails' => true, // Should be set to false in production
+            'displayErrorDetails' => false,
             'uploadDir' => __DIR__.'/../var/uploads/',
             'logger' => [
                 'name' => 'slim-app',
                 'path' => __DIR__.'/../var/logs/app.log',
-                'level' => Logger::DEBUG,
+                'level' => Logger::WARNING,
             ],
         ],
         'view' => Twig::create(__DIR__.'/../templates/', [
-            // 'cache' => 'path/to/cache',
+            'cache' => __DIR__.'/../var/cache/',
         ]),
     ]);
 };
