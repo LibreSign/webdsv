@@ -2,14 +2,10 @@
 
 ## Setup
 
-Clone este repositório. A porta padrão está no arquivo `docker-compose.yml` que é 8080, modifique para sua preferência.
+Clone this repository and run `docker-compose up`.
 
-Execute este comando na raiz do projeto:
+The default port is `80`, if you need, change in `docker-compose.yml`
 
-```bash
-make
-```
+## Example
 
-Exemplo da aplicação em funcionamento:
-
-https://validador.lt.coop.br/
+https://validador.librecode.coop
