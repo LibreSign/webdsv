@@ -19,6 +19,9 @@ RUN curl https://poppler.freedesktop.org/poppler-20.08.0.tar.xz -o /tmp/poppler-
     && make
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+WORKDIR /app
+
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 

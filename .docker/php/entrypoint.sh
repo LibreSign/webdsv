@@ -1,6 +1,6 @@
 #!/bin/sh
-cd /var/www/html
 if [ ! -d "vendor" ]; then
     composer install
+    chown -R www-data:www-data var
 fi
 php-fpm
