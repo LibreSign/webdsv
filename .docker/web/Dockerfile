@@ -6,6 +6,8 @@ RUN apt update && apt install -y git cmake poppler-data libopenjp2-7-dev libfree
     && cd poppler-20.08.0 && mkdir build && cd build \
     && cmake .. -DBUILD_GTK_TESTS=OFF -DBUILD_QT5_TESTS=OFF -DBUILD_QT6_TESTS=OFF -DBUILD_CPP_TESTS=OFF -DENABLE_SPLASH=OFF -DENABLE_CPP=OFF -DENABLE_GLIB=OFF -DENABLE_GOBJECT_INTROSPECTION=OFF -DENABLE_QT5=OFF -DENABLE_QT6=OFF -DENABLE_CMS=lcms2 -DENABLE_LIBOPENJPEG=openjpeg2 \
     && make
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 
 FROM prod as dev
 RUN yes | pecl install xdebug-2.9.6
