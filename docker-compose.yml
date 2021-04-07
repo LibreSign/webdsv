@@ -1,12 +1,12 @@
 version: "3.7"
 
 services:
-    web:
-        build:
-            context: ./.docker/web
-            target: prod
-        volumes:
-            - ./:/var/www/html
-            - ~/.composer:/root/.composer
-        ports:
-            - 80:80
+  web:
+    build:
+      context: ./.docker/web
+      target: prod
+    volumes:
+      - ./:/var/www/html
+      - ~/.composer:/root/.composer
+    ports:
+      - 80:80
