@@ -3,9 +3,9 @@ version: "3.7"
 services:
     web:
         build:
-            context: ./devops
+            context: ./.docker/web
             target: prod
         volumes:
-            - ./web:/var/www/html
+            - ./:/var/www/html
         ports:
             - 8080:80
