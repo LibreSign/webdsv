@@ -9,4 +9,4 @@ services:
             - ./:/var/www/html
             - ~/.composer:/root/.composer
         ports:
-            - 8080:80
+            - 80:80
