@@ -10,7 +10,6 @@
     "homepage": "https://validador.lt.coop.br/",
     "license": "AGPL",
     "require": {
-        "php": "^7.2",
         "ext-json": "*",
         "monolog/monolog": "^2.1",
         "ncjoes/poppler-php": "^1.1",
