@@ -1,5 +1,5 @@
 {
-    "name": "lyseontech/webdsv",
+    "name": "libresign/webdsv",
     "description": "Digital Signature Validation - Web version",
     "keywords": [
         "microframework",
@@ -7,7 +7,7 @@
         "router",
         "psr7"
     ],
-    "homepage": "https://validador.lt.coop.br/",
+    "homepage": "https://github.com/libresign/webdsv/",
     "license": "AGPL",
     "require": {
         "ext-json": "*",
