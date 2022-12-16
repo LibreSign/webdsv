@@ -20,8 +20,15 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 
 FROM prod as dev
-
-COPY config/php.ini /usr/local/etc/php/conf.d/
+ARG host_uid=1000
+ARG host_gid=1000
 
 RUN pecl install xdebug-3.2.0 \
     && docker-php-ext-enable xdebug
+
+RUN usermod --non-unique --uid ${host_uid} www-data \
+  && groupmod --non-unique --gid ${host_gid} www-data
+
+USER www-data
+
+COPY config/php.ini /usr/local/etc/php/conf.d/
