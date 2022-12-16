@@ -10,3 +10,4 @@
 !/var/uploads/.gitkeep
 /var/logs/*
 !/var/logs/.gitkeep
+.env

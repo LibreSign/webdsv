@@ -11,23 +11,13 @@
     "license": "AGPL",
     "require": {
         "ext-json": "*",
-        "monolog/monolog": "^2.1",
-        "ncjoes/poppler-php": "^1.1",
-        "php-di/php-di": "^6.2",
-        "slim/psr7": "^1.1",
-        "slim/slim": "^4.5",
-        "slim/twig-view": "^3.0",
-        "twig/twig": "^3.0"
-    },
-    "require-dev": {
-        "jangregor/phpstan-prophecy": "^0.8.0",
-        "phpstan/extension-installer": "^1.0.4",
-        "phpstan/phpstan": "^0.12.37",
-        "phpunit/phpunit": "^8.5"
-    },
-    "config": {
-        "process-timeout": 0,
-        "sort-packages": true
+        "monolog/monolog": "^3.2",
+        "ncjoes/poppler-php": "dev-feature/bump-versions",
+        "php-di/php-di": "^6.4",
+        "slim/psr7": "^1.6",
+        "slim/slim": "^4.11",
+        "slim/twig-view": "^3.3",
+        "twig/twig": "^3.4"
     },
     "autoload": {
         "psr-4": {
@@ -41,5 +31,11 @@
     },
     "scripts": {
         "test": "phpunit"
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/LibreSign/poppler-php"
+        }
+    ]
 }
