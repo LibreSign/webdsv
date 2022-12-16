@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use NcJoes\PopplerPhp\Constants;
 use NcJoes\PopplerPhp\PopplerOptions\ConsoleFlags;
 use NcJoes\PopplerPhp\PopplerOptions\CredentialOptions;
 use NcJoes\PopplerPhp\PopplerOptions\DateFlags;
@@ -32,7 +33,7 @@ class PdfSig extends PopplerUtil
     public function __construct($pdfFile = '', array $options = [])
     {
         $this->setRequireOutputDir(false);
-        $this->binFile = '/tmp/poppler-20.08.0/build/utils/pdfsig';
+        $this->binFile = 'pdfsig';
 
         return parent::__construct($pdfFile, $options);
     }
