@@ -1,20 +1,19 @@
-version: "3.7"
-
 services:
   php:
     build:
       context: ./.docker/php
-      target: ${ENVIRONMENT-prod}
     volumes:
       - ./:/app
       - ~/.composer:/root/.composer
     environment:
       XDEBUG_CONFIG: client_host=172.17.0.1 client_port=9003 start_with_request=yes
+      HOST_UID: ${HOST_UID:-www-data}
+      HOST_GID: ${HOST_GID:-www-data}
   nginx:
     image: nginx:latest
     restart: always
     ports:
-      - 80:80
+      - 127.0.0.1:${HTTP_PORT:-80}:80
     depends_on:
       - php
     volumes:
