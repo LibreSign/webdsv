@@ -11,13 +11,13 @@
     "license": "AGPL",
     "require": {
         "ext-json": "*",
-        "monolog/monolog": "^3.2",
+        "monolog/monolog": "^3.8",
         "ncjoes/poppler-php": "dev-feature/bump-versions",
-        "php-di/php-di": "^6.4",
-        "slim/psr7": "^1.6",
-        "slim/slim": "^4.11",
-        "slim/twig-view": "^3.3",
-        "twig/twig": "^3.4"
+        "php-di/php-di": "^7.0",
+        "slim/psr7": "^1.7",
+        "slim/slim": "^4.14",
+        "slim/twig-view": "^3.4",
+        "twig/twig": "^3.17"
     },
     "autoload": {
         "psr-4": {
