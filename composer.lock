@@ -706,21 +706,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LibreSign/poppler-php.git",
-                "reference": "4b109161d1d7e1ea43713c27946099bb46dd448e"
+                "reference": "5a35bf3001c8a0c3637e9a402c94f8a95ad2ca43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LibreSign/poppler-php/zipball/4b109161d1d7e1ea43713c27946099bb46dd448e",
-                "reference": "4b109161d1d7e1ea43713c27946099bb46dd448e",
+                "url": "https://api.github.com/repos/LibreSign/poppler-php/zipball/5a35bf3001c8a0c3637e9a402c94f8a95ad2ca43",
+                "reference": "5a35bf3001c8a0c3637e9a402c94f8a95ad2ca43",
                 "shasum": ""
             },
             "require": {
-                "illuminate/config": "^9.44",
-                "illuminate/support": "^9.44",
+                "illuminate/config": "^9.52",
+                "illuminate/support": "^9.52",
                 "php": ">=8"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9.5"
+                "phpunit/phpunit": "^11.5"
             },
             "type": "library",
             "autoload": {
@@ -752,7 +752,7 @@
             "support": {
                 "source": "https://github.com/LibreSign/poppler-php/tree/feature/bump-versions"
             },
-            "time": "2022-12-16T21:40:58+00:00"
+            "time": "2024-12-24T14:45:29+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1089,22 +1089,27 @@
         },
         {
             "name": "psr/container",
-            "version": "1.1.2",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/513e0666f7216c7459170d56df27dfcefe1689ea",
-                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -1131,9 +1136,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/1.1.2"
+                "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
-            "time": "2021-11-05T16:50:12+00:00"
+            "time": "2021-11-05T16:47:00+00:00"
         },
         {
             "name": "psr/http-factory",
